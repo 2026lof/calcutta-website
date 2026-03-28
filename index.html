@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcutta Wrap & Roll</title>
+  <meta name="description" content="Calcutta Wrap & Roll - Premium Indian street food experience with wraps, curries, biryani, and easy online ordering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-soft: #fbf8f2;
+      --text: #1c1b19;
+      --muted: #6d655c;
+      --primary: #c62828;
+      --primary-dark: #9f1f1f;
+      --accent: #2e7d32;
+      --gold: #d6a64f;
+      --card: rgba(255, 255, 255, 0.78);
+      --card-solid: #ffffff;
+      --border: rgba(70, 52, 30, 0.10);
+      --shadow: 0 20px 60px rgba(30, 22, 15, 0.10);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #ffe9a8 0%, #f6f1e8 32%, #f6f1e8 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), 92%);
+      margin: 0 auto;
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      color: #fff7e6;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(214, 166, 79, 0.14);
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(198, 40, 40, 0.24);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 34px rgba(198, 40, 40, 0.28);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-color: rgba(255,255,255,0.32);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--text);
+      border-color: rgba(0,0,0,0.06);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(246, 241, 232, 0.75);
+      border-bottom: 1px solid rgba(60, 45, 30, 0.07);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-img {
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.10));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-text strong {
+      font-size: 1.02rem;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-text span {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:not(.btn) {
+      position: relative;
+      color: #42392f;
+    }
+
+    .nav-links a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.22s ease;
+    }
+
+    .nav-links a:not(.btn):hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(100deg, rgba(19, 15, 11, 0.78) 0%, rgba(19, 15, 11, 0.52) 45%, rgba(19, 15, 11, 0.28) 100%),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(214,166,79,0.16), transparent 32%),
+        radial-gradient(circle at 80% 30%, rgba(46,125,50,0.14), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -60px;
+      width: 520px;
+      height: 520px;
+      background: url("images/logo.png") no-repeat center;
+      background-size: contain;
+      opacity: 0.07;
+      pointer-events: none;
+      filter: blur(0.3px);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+      padding: 70px 0;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+    }
+
+    .hero-logo {
+      width: min(380px, 78%);
+      margin-bottom: 24px;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.22));
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin: 20px 0 18px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: rgba(255,255,255,0.86);
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .meta-pill {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(10px);
+      color: #fff4dd;
+      font-size: 0.92rem;
+    }
+
+    .hero-card {
+      justify-self: end;
+      width: min(420px, 100%);
+      border-radius: 30px;
+      padding: 26px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.20);
+    }
+
+    .hero-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 18px;
+      font-size: 0.98rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .feature-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(214,166,79,0.18);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.98rem;
+    }
+
+    .feature-item span {
+      color: rgba(255,255,255,0.76);
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(14px);
+    }
+
+    .about-card {
+      padding: 34px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .about-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    .about-badge {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      background: rgba(255,255,255,0.86);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 20px;
+      padding: 16px 18px;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+    }
+
+    .about-badge strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .about-badge span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .menu-card {
+      padding: 26px;
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+      background: rgba(255,255,255,0.82);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(30,22,15,0.14);
+    }
+
+    .menu-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .menu-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .price {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff6ea;
+      color: #8a5a15;
+      border: 1px solid rgba(214,166,79,0.25);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .cta-band {
+      padding: 36px;
+      border-radius: 30px;
+      background:
+        linear-gradient(120deg, rgba(198,40,40,0.97), rgba(126,22,22,0.97)),
+        linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+      color: white;
+      box-shadow: 0 24px 60px rgba(124, 28, 28, 0.20);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-band h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .cta-band p {
+      color: rgba(255,255,255,0.82);
+      max-width: 650px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-card.large {
+      grid-row: span 2;
+      min-height: 540px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.06));
+      pointer-events: none;
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .review-card {
+      padding: 28px;
+      background: rgba(255,255,255,0.86);
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+
+    .review-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .review-card strong {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .review-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .updates-card,
+    .contact-card,
+    .contact-form-wrap {
+      padding: 30px;
+    }
+
+    .updates-card h3,
+    .contact-card h3,
+    .contact-form-wrap h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .updates-card p,
+    .contact-card p,
+    .contact-form-wrap p {
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .contact-line {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(0,0,0,0.05);
+      color: #433a31;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.90);
+      border-radius: 16px;
+      padding: 15px 16px;
+      font: inherit;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: rgba(198,40,40,0.45);
+      box-shadow: 0 0 0 4px rgba(198,40,40,0.08);
+    }
+
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 34px 0 46px;
+      background: #171411;
+      color: #ede6dc;
+      margin-top: 28px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-brand img {
+      height: 52px;
+      width: auto;
+    }
+
+    .footer-copy {
+      color: rgba(237,230,220,0.72);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-inner,
+      .grid-2,
+      .grid-3,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-card {
+        justify-self: start;
+      }
+
+      .gallery-card.large {
+        grid-row: span 1;
+        min-height: 320px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links .btn {
+        width: 100%;
+      }
+
+      .logo-img {
+        height: 52px;
+      }
+
+      .hero-logo {
+        width: min(300px, 84%);
+      }
+
+      .hero h1 {
+        line-height: 0.98;
+      }
+
+      .section {
+        padding: 74px 0;
+      }
+
+      .cta-band,
+      .about-card,
+      .updates-card,
+      .contact-card,
+      .contact-form-wrap,
+      .menu-card,
+      .review-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="Calcutta Wrap & Roll Logo" class="logo-img">
+        <div class="brand-text">
+          <strong>Calcutta Wrap & Roll</strong>
+          <span>Delicious Indian food to go</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#updates">Updates</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="https://www.ordercalcuttawrapandroll.com/" target="_blank" rel="noopener">Order Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Celebrating over 10 years in business</div>
+
+        <img src="images/logo.png" alt="Calcutta Wrap & Roll" class="hero-logo">
+
+        <h1>Indian street food with a refined, modern feel</h1>
+
+        <p>
+          Fresh wraps, rich curries, biryani, kebabs, and bold flavors crafted for
+          quick ordering, stylish presentation, and a memorable takeout experience.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.ordercalcuttawrapandroll.com/" target="_blank" rel="noopener">Order Now</a>
+          <a class="btn btn-outline" href="#menu">Explore Menu</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-pill">Freshly prepared daily</div>
+          <div class="meta-pill">Pick-up & delivery</div>
+          <div class="meta-pill">Bold Indian flavors</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Why guests love us</h3>
+        <p>
+          A vibrant restaurant experience built around premium presentation,
+          authentic flavor, and easy online ordering.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">✦</div>
+            <div>
+              <strong>Freshly made</strong>
+              <span>Prepared with bold spices and quality ingredients.</span>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">✦</div>
+            <div>
+              <strong>Fast ordering</strong>
+              <span>Simple online ordering for pickup or delivery.</span>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">✦</div>
+            <div>
+              <strong>Signature flavors</strong>
+              <span>Wraps, curries, biryani, and favorites worth repeating.</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-light" href="#contact">Visit Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">A modern take on Indian comfort food</h2>
+      <p class="section-subtitle">
+        Calcutta Wrap & Roll brings the warmth of Indian street food into a cleaner,
+        more elevated restaurant experience with rich spices, fast service, and a strong local identity.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card about-card">
+          <p>
+            Every dish is designed to feel generous, flavorful, and satisfying — from wraps
+            and rice bowls to tandoori favorites and signature curries.
+          </p>
+          <p>
+            The goal is simple: serve food that feels authentic, memorable, and easy to order again.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>10+</strong>
+              <span>Years serving guests</span>
+            </div>
+            <div class="stat">
+              <strong>Fast</strong>
+              <span>Pickup & delivery</span>
+            </div>
+            <div class="stat">
+              <strong>Fresh</strong>
+              <span>Made to order</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1400&q=80" alt="Indian platter">
+          <div class="about-badge">
+            <strong>Bold Flavor</strong>
+            <span>Street food energy, premium presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="container">
+      <h2 class="section-title">Signature favorites</h2>
+      <p class="section-subtitle">
+        Showcase your best-selling dishes with a polished, premium look.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Chicken Tikka Wrap</h3>
+            <div class="price">$13</div>
+          </div>
+          <p>Marinated chicken, layered spices, fresh vegetables, and bold house flavor in every bite.</p>
+          <span class="tag">Guest Favorite</span>
+        </div>
+
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Paneer Roll</h3>
+            <div class="price">$12</div>
+          </div>
+          <p>Soft paneer with savory masala, crisp vegetables, and a satisfying street-style finish.</p>
+          <span class="tag">Vegetarian</span>
+        </div>
+
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Butter Chicken</h3>
+            <div class="price">$16</div>
+          </div>
+          <p>Creamy, rich, and comforting with tender chicken in a smooth tomato-based sauce.</p>
+          <span class="tag">Classic</span>
+        </div>
+
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Biryani Special</h3>
+            <div class="price">$17</div>
+          </div>
+          <p>Fragrant basmati rice, layered spices, and deep flavor cooked for a beautifully aromatic finish.</p>
+          <span class="tag">House Special</span>
+        </div>
+
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Tandoori Wings</h3>
+            <div class="price">$14</div>
+          </div>
+          <p>Smoky, spicy, and bold with a crisp finish — ideal for sharing or enjoying solo.</p>
+          <span class="tag">Popular</span>
+        </div>
+
+        <div class="card menu-card">
+          <div class="menu-top">
+            <h3>Veggie Combo</h3>
+            <div class="price">$15</div>
+          </div>
+          <p>A vibrant assortment of vegetarian favorites designed for variety, warmth, and comfort.</p>
+          <span class="tag">Chef Pick</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Order online with ease</h2>
+          <p>
+            Fresh favorites, fast pickup, and easy delivery from Calcutta Wrap & Roll.
+          </p>
+        </div>
+        <a class="btn btn-light" href="https://www.ordercalcuttawrapandroll.com/" target="_blank" rel="noopener">Start Your Order</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">A visual taste of the experience</h2>
+      <p class="section-subtitle">
+        Replace these with your real food photography for an even stronger premium look.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-card large">
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80" alt="Indian dish">
+          <div class="gallery-label">Signature plates</div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80" alt="Indian food">
+          <div class="gallery-label">Fresh ingredients</div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1200&q=80" alt="Restaurant food">
+          <div class="gallery-label">Bold flavors</div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80" alt="Curry dish">
+          <div class="gallery-label">House favorites</div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1200&q=80" alt="Indian meal">
+          <div class="gallery-label">Premium presentation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2 class="section-title">What guests are saying</h2>
+      <p class="section-subtitle">
+        Add your real customer reviews here to make the site feel even more trustworthy.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            The food is always fresh, flavorful, and beautifully prepared. One of our favorite local takeout spots.
+          </p>
+          <strong>Priya M.</strong>
+          <span>Local customer</span>
+        </div>
+
+        <div class="card review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Fast service, excellent wraps, and the biryani is consistently amazing. The whole experience feels polished.
+          </p>
+          <strong>Daniel R.</strong>
+          <span>Regular guest</span>
+        </div>
+
+        <div class="card review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Great flavors, easy online ordering, and everything arrives exactly how you want it. Highly recommended.
+          </p>
+          <strong>Sonia P.</strong>
+          <span>Neighborhood favorite</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="updates">
+    <div class="container">
+      <h2 class="section-title">Latest updates</h2>
+      <p class="section-subtitle">
+        Use this section for specials, catering, events, and seasonal promotions.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card updates-card">
+          <h3>Lunch specials</h3>
+          <p>Introduce weekday favorites that bring speed, flavor, and value to the midday crowd.</p>
+        </div>
+
+        <div class="card updates-card">
+          <h3>Catering events</h3>
+          <p>Promote trays, group orders, and family meal options for celebrations and office lunches.</p>
+        </div>
+
+        <div class="card updates-card">
+          <h3>Seasonal dishes</h3>
+          <p>Feature limited-time menu highlights with a premium visual layout that draws attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Visit, call, or message us</h2>
+      <p class="section-subtitle">
+        Replace the placeholder details below with your real address, phone number, hours, and email.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card contact-card">
+          <h3>Contact details</h3>
+          <p>We make it simple for guests to find you, call you, and place an order.</p>
+
+          <div class="contact-list">
+            <div class="contact-line">123 Main Street, Your City, NY 00000</div>
+            <div class="contact-line">(555) 123-4567</div>
+            <div class="contact-line">hello@calcuttawrapandroll.com</div>
+            <div class="contact-line">Mon – Sun: 11:00 AM – 10:00 PM</div>
+          </div>
+        </div>
+
+        <div class="card contact-form-wrap">
+          <h3>Send a message</h3>
+          <p>A simple contact form gives the site a polished and complete look.</p>
+
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Calcutta Wrap & Roll logo">
+        <div>
+          <strong>Calcutta Wrap & Roll</strong>
+          <div class="footer-copy">Premium Indian street food experience</div>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Calcutta Wrap & Roll. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
