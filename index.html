@@ -11,21 +11,23 @@
 
   <style>
     :root {
-      --bg: #f6f1e8;
-      --bg-soft: #fbf8f2;
-      --text: #1c1b19;
-      --muted: #6d655c;
-      --primary: #c62828;
-      --primary-dark: #9f1f1f;
-      --accent: #2e7d32;
-      --gold: #d6a64f;
-      --card: rgba(255, 255, 255, 0.78);
-      --card-solid: #ffffff;
-      --border: rgba(70, 52, 30, 0.10);
-      --shadow: 0 20px 60px rgba(30, 22, 15, 0.10);
-      --radius: 24px;
-      --radius-sm: 18px;
-      --max: 1180px;
+      --bg: #fff8e6;
+      --bg-soft: #fffdf7;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+
+      --primary: #e10600;        /* RED from logo */
+      --primary-dark: #b00000;
+
+      --accent: #5edc00;         /* GREEN from WRAP & ROLL */
+      --accent-dark: #3cb300;
+
+      --gold: #f4c430;           /* yellow tone */
+
+      --card: rgba(255, 255, 255, 0.85);
+      --border: rgba(0, 0, 0, 0.06);
+
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -123,16 +125,36 @@
     .btn:hover {
       transform: translateY(-2px);
     }
+    
+    .hero::before {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(244,196,48,0.25), transparent 40%);
+}
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
-      box-shadow: 0 14px 28px rgba(198, 40, 40, 0.24);
-    }
+  .btn-primary {
+  background: linear-gradient(135deg, #e10600, #b00000);
+  color: white;
+  box-shadow: 0 10px 30px rgba(225, 6, 0, 0.4);
+}
 
     .btn-primary:hover {
       box-shadow: 0 18px 34px rgba(198, 40, 40, 0.28);
     }
+
+    .section-title {
+  color: #e10600;
+}
+
+    .price {
+  color: #5edc00;
+  font-weight: bold;
+}
+
+    .tag {
+  background: #eaffd6;
+  color: #3cb300;
+  border: 1px solid rgba(94, 220, 0, 0.3);
+}
 
     .btn-outline {
       background: rgba(255,255,255,0.08);
@@ -229,16 +251,11 @@
     }
 
     .hero {
-      position: relative;
-      min-height: 94vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(100deg, rgba(19, 15, 11, 0.78) 0%, rgba(19, 15, 11, 0.52) 45%, rgba(19, 15, 11, 0.28) 100%),
-        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
-      color: white;
-    }
+  background:
+    linear-gradient(110deg, rgba(0,0,0,0.65), rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1800&q=80")
+    center/cover no-repeat;
+}
 
     .hero::before {
       content: "";
