@@ -801,6 +801,63 @@
       font-size: 0.95rem;
     }
 
+    .footer-copy a {
+      color: rgba(237,230,220,0.85);
+      margin-left: 14px;
+    }
+
+    .club-band {
+      align-items: flex-start;
+    }
+
+    .club-band > div {
+      flex: 1 1 320px;
+    }
+
+    .club-form {
+      flex: 1 1 380px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .club-form input[type="text"],
+    .club-form input[type="tel"],
+    .club-form input[type="email"] {
+      width: 100%;
+      border: 1px solid rgba(255, 236, 197, 0.3);
+      background: rgba(255, 250, 240, 0.96);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font: inherit;
+      color: var(--text);
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.5;
+    }
+
+    .consent input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--gold);
+    }
+
+    .consent a {
+      color: #ffe2a4;
+      text-decoration: underline;
+    }
+
+    .hidden-field {
+      display: none;
+    }
+
     @media (max-width: 1080px) {
       .hero-inner,
       .grid-2,
@@ -895,6 +952,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#updates">Updates</a>
+        <a href="#text-club">Text Club</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="https://www.ordercalcuttawrapandroll.com/" target="_blank" rel="noopener">Order Online</a>
       </nav>
@@ -1012,7 +1070,7 @@
     <div class="container section-shell">
       <h2 class="section-title">Signature favorites</h2>
       <p class="section-subtitle">
-        Showcase your best-selling dishes with a polished, premium look.
+        A few of the dishes our guests order again and again.
       </p>
 
       <div class="grid grid-3">
@@ -1091,7 +1149,7 @@
     <div class="container section-shell">
       <h2 class="section-title">A visual taste of the experience</h2>
       <p class="section-subtitle">
-        Replace these with your real food photography for an even stronger premium look.
+        Bold spices, fresh ingredients, and generous portions, made to order every day.
       </p>
 
       <div class="gallery">
@@ -1125,39 +1183,13 @@
 
   <section class="section section-alt" id="reviews">
     <div class="container section-shell">
-      <h2 class="section-title">What guests are saying</h2>
+      <h2 class="section-title">Loved your meal?</h2>
       <p class="section-subtitle">
-        Add your real customer reviews here to make the site feel even more trustworthy.
+        Reviews help neighbors in Ardsley and beyond discover us. If you enjoyed your food,
+        we'd be grateful if you shared your experience on Google.
       </p>
 
-      <div class="grid grid-3">
-        <div class="card review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            The food is always fresh, flavorful, and beautifully prepared. One of our favorite local takeout spots.
-          </p>
-          <strong>Priya M.</strong>
-          <span>Local customer</span>
-        </div>
-
-        <div class="card review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            Fast service, excellent wraps, and the biryani is consistently amazing. The whole experience feels polished.
-          </p>
-          <strong>Daniel R.</strong>
-          <span>Regular guest</span>
-        </div>
-
-        <div class="card review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            Great flavors, easy online ordering, and everything arrives exactly how you want it. Highly recommended.
-          </p>
-          <strong>Sonia P.</strong>
-          <span>Neighborhood favorite</span>
-        </div>
-      </div>
+      <a class="btn btn-primary" href="https://www.google.com/search?q=Calcutta+Wrap+%26+Roll+465+Ashford+Ave+Ardsley+NY" target="_blank" rel="noopener">Read &amp; write reviews on Google</a>
     </div>
   </section>
 
@@ -1165,7 +1197,7 @@
     <div class="container section-shell">
       <h2 class="section-title">Latest updates</h2>
       <p class="section-subtitle">
-        Use this section for specials, catering, events, and seasonal promotions.
+        Specials, catering, and seasonal dishes. Join the Text Club to hear about them first.
       </p>
 
       <div class="grid grid-3">
@@ -1187,11 +1219,50 @@
     </div>
   </section>
 
+  <section class="section" id="text-club">
+    <div class="container">
+      <div class="cta-band club-band">
+        <div>
+          <h2>Join the Text Club</h2>
+          <p>
+            Be the first to hear about specials, new dishes, and catering offers.
+            Up to 4 texts a month, and you can opt out any time.
+          </p>
+        </div>
+
+        <form class="club-form" name="text-club" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <input type="hidden" name="form-name" value="text-club">
+          <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
+          <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required>
+          <input type="tel" name="mobile" placeholder="Mobile number" autocomplete="tel" required>
+          <input type="email" name="email" placeholder="Email (optional)" autocomplete="email">
+
+          <label class="consent">
+            <input type="checkbox" name="sms_consent" value="yes" required>
+            <span>
+              I agree to receive recurring marketing text messages from Calcutta Wrap &amp; Roll at the number provided.
+              Consent is not a condition of purchase. Msg frequency varies, up to 4 msgs/month. Msg &amp; data rates may apply.
+              Reply HELP for help, STOP to cancel. See our <a href="sms-terms.html">Text Club Terms</a> and
+              <a href="privacy.html">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="email_consent" value="yes">
+            <span>Also send me offers by email. Unsubscribe any time.</span>
+          </label>
+
+          <button type="submit" class="btn btn-light">Join the Text Club</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-alt" id="contact">
     <div class="container section-shell">
       <h2 class="section-title">Visit, call, or message us</h2>
       <p class="section-subtitle">
-        Replace the placeholder details below with your real address, phone number, hours, and email.
+        Stop by for pickup, give us a call, or send a message. We would love to hear from you.
       </p>
 
       <div class="grid grid-2">
@@ -1200,21 +1271,23 @@
           <p>We make it simple for guests to find you, call you, and place an order.</p>
 
           <div class="contact-list">
-            <div class="contact-line">123 Main Street, Your City, NY 00000</div>
-            <div class="contact-line">(555) 123-4567</div>
-            <div class="contact-line">hello@calcuttawrapandroll.com</div>
+            <div class="contact-line">465 Ashford Avenue, Ardsley, NY 10502</div>
+            <div class="contact-line"><a href="tel:+19145912222">(914) 591-2222</a></div>
+            <div class="contact-line"><a href="mailto:hello@calcuttawrapandroll.com">hello@calcuttawrapandroll.com</a></div>
             <div class="contact-line">Mon – Sun: 11:00 AM – 10:00 PM</div>
           </div>
         </div>
 
         <div class="card contact-form-wrap">
           <h3>Send a message</h3>
-          <p>A simple contact form gives the site a polished and complete look.</p>
+          <p>Questions, catering requests, or feedback? Send us a note and we will get back to you.</p>
 
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
@@ -1234,6 +1307,8 @@
 
       <div class="footer-copy">
         © 2026 Calcutta Wrap & Roll. All rights reserved.
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sms-terms.html">Text Club Terms</a>
       </div>
     </div>
   </footer>
