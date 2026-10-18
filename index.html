@@ -819,6 +819,18 @@
       flex: 1 1 320px;
     }
 
+    .club-coin {
+      --d: 120px;
+      width: var(--d);
+      height: var(--d);
+      border-radius: 50%;
+      background: url("images/restrobucks.jpg") no-repeat;
+      background-size: calc(var(--d) * 1536 / 770) auto;
+      background-position: calc(var(--d) * -385 / 770) calc(var(--d) * -152 / 770);
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
     .club-form {
       flex: 1 1 380px;
       display: grid;
@@ -1226,9 +1238,11 @@
     <div class="container">
       <div class="cta-band club-band">
         <div>
+          <div class="club-coin" role="img" aria-label="RestroBucks logo"></div>
           <h2>Join RestroBucks</h2>
           <p>
             Our members-only club: be the first to hear about deals, new dishes, and catering offers by text.
+            <strong>Welcome treat: free veg spring rolls on your next $20+ order.</strong>
             Up to 4 texts a month, opt out any time. RestroBucks rewards on every order are coming soon with our new online ordering.
           </p>
         </div>
