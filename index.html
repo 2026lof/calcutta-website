@@ -100,6 +100,29 @@
       text-transform: uppercase;
     }
 
+    .eyebrow:has(.eyebrow-sep) {
+      display: inline-grid;
+      grid-template-columns: 8px auto;
+      column-gap: 10px;
+      row-gap: 2px;
+      border-radius: 18px;
+      padding: 9px 16px;
+    }
+
+    .eyebrow:has(.eyebrow-sep)::before {
+      grid-row: 1;
+      align-self: center;
+    }
+
+    .eyebrow-sep {
+      display: none;
+    }
+
+    .eyebrow:has(.eyebrow-sep) span:last-child {
+      grid-column: 2;
+      color: var(--gold);
+    }
+
     .eyebrow::before {
       content: "";
       width: 8px;
@@ -984,7 +1007,7 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <div class="eyebrow">Celebrating over 10 years in business</div>
+        <div class="eyebrow"><span>Celebrating over 16 years in business</span><span class="eyebrow-sep" aria-hidden="true">·</span><span>Serving Ardsley since 2010</span></div>
 
         <h1>Indian street food with a refined, modern feel</h1>
 
@@ -1063,8 +1086,8 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>10+</strong>
-              <span>Years serving guests</span>
+              <strong>16+</strong>
+              <span>Years serving Ardsley</span>
             </div>
             <div class="stat">
               <strong>Fast</strong>
