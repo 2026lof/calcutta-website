@@ -1,6 +1,8 @@
 # Until the RestroBud launch on Mon Nov 2, calcuttawrapandroll.com sends visitors to the old
-# site. 302 (temporary) so browsers don't remember it. Delete these two lines on launch day.
+# site. 302 (temporary) so browsers don't remember it. Delete these four lines on launch day.
+http://calcuttawrapandroll.com/*       https://calcuttawrapandroll.net/  302!
 https://calcuttawrapandroll.com/*      https://calcuttawrapandroll.net/  302!
+http://www.calcuttawrapandroll.com/*   https://calcuttawrapandroll.net/  302!
 https://www.calcuttawrapandroll.com/*  https://calcuttawrapandroll.net/  302!
 
 # Ordering lives on RestroBud. Posts, buttons and printed material link here instead,
