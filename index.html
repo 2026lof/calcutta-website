@@ -28,8 +28,9 @@
       --muted: #6f6256;
       --primary: #bc1f14;
       --primary-dark: #86150f;
-      --accent: #4d8d2a;
-      --accent-dark: #34641b;
+      --accent: #7d780c;
+      --accent-dark: #5c5808;
+      --lime: #c9c11c; /* the store's chartreuse walls */
       --gold: #d7a93f;
       --gold-soft: #f5e2ab;
       --border: rgba(79, 49, 24, 0.12);
@@ -51,8 +52,8 @@
       font-family: "Inter", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top, rgba(236, 195, 105, 0.52) 0%, rgba(247, 239, 223, 0) 34%),
-        linear-gradient(180deg, #f8f1e3 0%, #f6ecda 48%, #fcf7ee 100%);
+        radial-gradient(circle at top, rgba(205, 196, 40, 0.30) 0%, rgba(247, 239, 223, 0) 34%),
+        linear-gradient(180deg, #f7f3df 0%, #f4f0d4 48%, #fcfaee 100%);
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -711,7 +712,7 @@
       inset: 0 auto auto 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--gold), var(--accent));
+      background: linear-gradient(90deg, var(--primary), var(--gold), var(--lime));
     }
 
     .menu-card:hover {
@@ -750,9 +751,9 @@
       display: inline-block;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(246, 228, 181, 0.42);
+      background: rgba(214, 206, 60, 0.18);
       color: var(--accent-dark);
-      border: 1px solid rgba(77, 141, 42, 0.18);
+      border: 1px solid rgba(185, 177, 20, 0.38);
       font-size: 0.84rem;
       font-weight: 600;
     }
