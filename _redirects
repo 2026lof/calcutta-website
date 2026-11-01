@@ -9,3 +9,4 @@ https://www.calcuttawrapandroll.com/*  https://calcuttawrapandroll.net/  302!
 # so the RestroBud address never shows and can change without reprinting anything.
 /order          https://restrobud.com/pos/calcutta-wrap-roll  302
 /south-indian   https://restrobud.com/pos/south-indian        302
+/rewards        /#restrobucks                                  302
