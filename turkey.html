@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#e3120b">
+  <title>Tandoori Turkey Legs Pre-order | Calcutta Wrap & Roll</title>
+  <meta name="description" content="Pre-order Tandoori Turkey Legs for Thanksgiving: $8 each, 2 for $14, 10 for $60. Pickup Wed Nov 25 or Thu Nov 26 in Ardsley, NY.">
+  <meta property="og:title" content="Tandoori Turkey Legs for Thanksgiving">
+  <meta property="og:description" content="$8 each · 2 for $14 · 10 for $60. Pre-order by Sunday, Nov 22.">
+  <meta property="og:image" content="https://www.calcuttawrapandroll.com/images/turkey.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="legal.css" />
+  <style>
+    body { background: linear-gradient(180deg, #f1edc4 0%, #f6f3d6 40%, #fcf7ee 100%); }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; margin-bottom: 28px; }
+    .hero img { width: 100%; border-radius: 20px; box-shadow: 0 14px 34px rgba(60, 30, 10, .18); }
+    .lead { font-size: 1.08rem; color: #4a3b30; margin: 12px 0; }
+    .facts { list-style: none; display: grid; gap: 8px; margin-top: 12px; }
+    .facts li { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+    form { background: #fffdf8; border: 1px solid var(--border); border-radius: 20px; padding: 26px; box-shadow: 0 10px 30px rgba(60, 30, 10, .08); display: grid; gap: 16px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    label { display: grid; gap: 6px; font-weight: 600; font-size: .95rem; }
+    label small { font-weight: 400; color: var(--muted); }
+    input, select, textarea { font: inherit; padding: 12px 14px; border: 1px solid rgba(79, 49, 24, .25); border-radius: 12px; background: #fff; width: 100%; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); border-color: transparent; }
+    fieldset { border: 0; display: grid; gap: 8px; }
+    legend { font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+    .choice { display: flex; gap: 10px; align-items: center; font-weight: 500; background: #fff; border: 1px solid rgba(79, 49, 24, .2); border-radius: 12px; padding: 12px 14px; cursor: pointer; }
+    .choice input { width: auto; }
+    .total { background: #f6f3d6; border-radius: 14px; padding: 14px 16px; font-size: 1.1rem; }
+    .total strong { color: var(--primary-dark); font-size: 1.35rem; }
+    button { font: 700 1.1rem "Inter", sans-serif; color: #fff; background: linear-gradient(135deg, #d4241a, #9e1a10); border: 0; border-radius: 999px; padding: 16px 28px; cursor: pointer; box-shadow: 0 10px 24px rgba(158, 26, 16, .3); }
+    button:disabled { background: #9a8f86; box-shadow: none; cursor: not-allowed; }
+    .note { color: var(--muted); font-size: .92rem; }
+    .closed { background: #fff3f0; border: 1px solid #f0c4bc; color: var(--primary-dark); border-radius: 12px; padding: 14px; margin-bottom: 16px; display: none; }
+    .hidden { display: none; }
+    @media (max-width: 700px) { .hero, .row { grid-template-columns: 1fr; } form { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="/"><img src="images/logo.png" alt="Calcutta Wrap & Roll Logo">Calcutta Wrap &amp; Roll</a>
+      <a class="back" href="/">← Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Tandoori Turkey Legs</h1>
+        <p class="lead">This Thanksgiving, give the turkey a Calcutta twist: big, juicy turkey legs marinated in yogurt and our tandoori spices, roasted until smoky and golden.</p>
+        <ul class="facts">
+          <li>💲 <strong>$8 each</strong> · 2 for $14 · 10 for $60</li>
+          <li>📅 Pre-order by <strong>Sunday, Nov 22</strong></li>
+          <li>🛍️ Pickup <strong>Wed Nov 25 or Thu Nov 26</strong>, 11 AM – 10 PM</li>
+          <li>🔥 Made fresh, just before your pickup time</li>
+        </ul>
+      </div>
+      <img src="images/turkey.jpg" alt="Tandoori Turkey Legs: $8 each, 2 for $14, 10 for $60">
+    </section>
+
+    <p class="closed" id="closed">Pre-orders closed on Sunday, Nov 22. Thank you! Call us at <a href="tel:+19145912222">(914) 591-2222</a> and we'll see what we can do.</p>
+
+    <form name="turkey-preorder" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/turkey-thanks.html" id="tform">
+      <input type="hidden" name="form-name" value="turkey-preorder">
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div class="row">
+        <label>Your name <input name="name" autocomplete="name" required></label>
+        <label>Phone number <input name="phone" type="tel" autocomplete="tel" required placeholder="(914) 555-0123"></label>
+      </div>
+      <label>Email <small>(optional, for your confirmation)</small> <input name="email" type="email" autocomplete="email"></label>
+      <div class="row">
+        <label>How many turkey legs? <input name="legs" id="legs" type="number" min="1" max="100" value="2" required></label>
+        <label>Pickup time <small>(11 AM – 10 PM)</small>
+          <select name="pickup_time" required>
+            <option value="">Choose a time</option>
+            <option>11:00 AM – 1:00 PM</option><option>1:00 – 3:00 PM</option><option>3:00 – 5:00 PM</option>
+            <option>5:00 – 7:00 PM</option><option>7:00 – 9:00 PM</option><option>9:00 – 10:00 PM</option>
+          </select>
+        </label>
+      </div>
+      <fieldset>
+        <legend>Pickup day</legend>
+        <label class="choice"><input type="radio" name="pickup_day" value="Wednesday, Nov 25" required> Wednesday, Nov 25</label>
+        <label class="choice"><input type="radio" name="pickup_day" value="Thursday, Nov 26 (Thanksgiving)"> Thursday, Nov 26 (Thanksgiving)</label>
+      </fieldset>
+      <label>Anything else? <small>(optional)</small> <textarea name="notes" rows="3" placeholder="Questions or special requests"></textarea></label>
+      <input type="hidden" name="estimated_total" id="est">
+      <div class="total">Estimated total: <strong id="total">$14</strong> <span class="note" id="breakdown"></span></div>
+      <button type="submit">Place my pre-order</button>
+      <p class="note">No payment now: you pay when you pick up. We'll call or text to confirm your order. Tax may apply.</p>
+    </form>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>© 2026 Calcutta Wrap &amp; Roll · 465 Ashford Ave, Ardsley, NY 10502 · (914) 591-2222</div>
+      <div><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const legs = document.getElementById("legs"), total = document.getElementById("total"),
+        est = document.getElementById("est"), bd = document.getElementById("breakdown");
+      // $8 each, 2 for $14, 10 for $60: always the best combination.
+      const price = (n) => { const tens = Math.floor(n / 10), r = n % 10; return tens * 60 + Math.floor(r / 2) * 14 + (r % 2) * 8; };
+      const upd = () => {
+        const n = Math.max(0, Math.min(100, parseInt(legs.value, 10) || 0)), p = price(n);
+        total.textContent = "$" + p;
+        est.value = n ? "$" + p + " for " + n + " leg" + (n > 1 ? "s" : "") : "";
+        bd.textContent = n >= 2 ? "(best price applied)" : "";
+      };
+      legs.addEventListener("input", upd); upd();
+      // Orders close at the end of Sunday, Nov 22 (New York time).
+      if (Date.now() > Date.parse("2026-11-23T00:00:00-05:00")) {
+        document.getElementById("closed").style.display = "block";
+        document.querySelectorAll("#tform input, #tform select, #tform textarea, #tform button").forEach((el) => { el.disabled = true; });
+      }
+    })();
+  </script>
+</body>
+</html>
