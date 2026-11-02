@@ -990,6 +990,12 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
     }
 
+    .club-hint {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin: -4px 0 2px;
+    }
+
     .club-form {
       flex: 1 1 380px;
       display: grid;
@@ -1391,21 +1397,22 @@
           <div class="club-coin" role="img" aria-label="RestroBucks logo"></div>
           <h2>Join RestroBucks</h2>
           <p>
-            Our members-only club: be the first to hear about deals, new dishes, and catering offers by text.
-            <strong>Welcome treat: free veg spring rolls on your next $20+ order.</strong>
-            Up to 4 texts a month, opt out any time. RestroBucks rewards on every order are coming soon with our new online ordering.
+            Our members-only club: be the first to hear about deals, new dishes, and catering offers by text or email.
+            <strong>Welcome gift: 200 RB$ free to redeem on your next order.</strong>
+            Just your name and your phone number or email. Up to 4 texts a month, opt out any time. RestroBucks rewards on every order are coming soon with our new online ordering.
           </p>
         </div>
 
         <form class="club-form" name="restrobucks" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
           <input type="hidden" name="form-name" value="restrobucks">
           <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
-          <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required>
-          <input type="tel" name="mobile" placeholder="Mobile number" autocomplete="tel" required>
-          <input type="email" name="email" placeholder="Email (optional)" autocomplete="email">
+          <input type="text" name="first_name" placeholder="Your name" autocomplete="name" required>
+          <input type="tel" name="mobile" placeholder="Phone number" autocomplete="tel">
+          <input type="email" name="email" placeholder="Email" autocomplete="email">
+          <p class="club-hint">Phone number or email: one is enough.</p>
 
           <label class="consent">
-            <input type="checkbox" name="sms_consent" value="yes" required>
+            <input type="checkbox" name="sms_consent" value="yes">
             <span>
               I agree to receive recurring marketing text messages from Calcutta Wrap &amp; Roll RestroBucks at the number provided.
               Consent is not a condition of purchase. Msg frequency varies, up to 4 msgs/month. Msg &amp; data rates may apply.
@@ -1416,11 +1423,27 @@
 
           <label class="consent">
             <input type="checkbox" name="email_consent" value="yes">
-            <span>Also send me offers by email. Unsubscribe any time.</span>
+            <span>Send me offers by email. Unsubscribe any time.</span>
           </label>
 
           <button type="submit" class="btn btn-light">Join RestroBucks</button>
         </form>
+        <script>
+          // Name plus a phone number or an email. A phone number needs the text consent box; an email alone needs the email box.
+          (() => {
+            const form = document.querySelector('form[name="restrobucks"]');
+            const phone = form.mobile, email = form.email, sms = form.sms_consent, mail = form.email_consent;
+            const sync = () => {
+              const p = phone.value.trim(), e = email.value.trim();
+              phone.setCustomValidity(p || e ? "" : "Please enter your phone number or email.");
+              sms.required = !!p;
+              mail.required = !p && !!e;
+            };
+            [phone, email].forEach((el) => el.addEventListener("input", sync));
+            form.addEventListener("submit", (ev) => { sync(); if (!form.reportValidity()) ev.preventDefault(); });
+            sync();
+          })();
+        </script>
       </div>
     </div>
   </section>
