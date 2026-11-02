@@ -40,6 +40,7 @@
     .note { color: var(--muted); font-size: .92rem; }
     .closed { background: #fff3f0; border: 1px solid #f0c4bc; color: var(--primary-dark); border-radius: 12px; padding: 14px; margin-bottom: 16px; display: none; }
     .hidden { display: none; }
+    .captcha { min-height: 78px; }
     @media (max-width: 700px) { .hero, .row { grid-template-columns: 1fr; } form { padding: 18px; } }
   </style>
 </head>
@@ -68,7 +69,7 @@
 
     <p class="closed" id="closed">Pre-orders closed on Sunday, Nov 22. Thank you! Call us at <a href="tel:+19145912222">(914) 591-2222</a> and we'll see what we can do.</p>
 
-    <form name="turkey-preorder" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/turkey-thanks.html" id="tform">
+    <form name="turkey-preorder" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" action="/turkey-thanks.html" id="tform">
       <input type="hidden" name="form-name" value="turkey-preorder">
       <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="row">
@@ -94,6 +95,7 @@
       <label>Anything else? <small>(optional)</small> <textarea name="notes" rows="3" placeholder="Questions or special requests"></textarea></label>
       <input type="hidden" name="estimated_total" id="est">
       <div class="total">Estimated total: <strong id="total">$14</strong> <span class="note" id="breakdown"></span></div>
+      <div class="captcha" data-netlify-recaptcha="true"></div>
       <button type="submit">Place my pre-order</button>
       <p class="note">No payment now: you pay when you pick up. We'll call or text to confirm your order. Tax may apply.</p>
     </form>

@@ -1,0 +1,6 @@
+# Static site (no build step). The only function sends turkey pre-orders to Telegram.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
