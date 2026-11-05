@@ -1,3 +1,15 @@
+# Old website domain: send everything to the new site. Old page addresses go to the matching section.
+https://calcuttawrapandroll.net/about  https://calcuttawrapandroll.com/#about  301!
+https://calcuttawrapandroll.net/contact  https://calcuttawrapandroll.com/#contact  301!
+https://calcuttawrapandroll.net/general-menu  https://calcuttawrapandroll.com/#menu  301!
+https://calcuttawrapandroll.net/catering-menu  https://calcuttawrapandroll.com/#menu  301!
+https://calcuttawrapandroll.net/*  https://calcuttawrapandroll.com/:splat  301!
+https://www.calcuttawrapandroll.net/about  https://calcuttawrapandroll.com/#about  301!
+https://www.calcuttawrapandroll.net/contact  https://calcuttawrapandroll.com/#contact  301!
+https://www.calcuttawrapandroll.net/general-menu  https://calcuttawrapandroll.com/#menu  301!
+https://www.calcuttawrapandroll.net/catering-menu  https://calcuttawrapandroll.com/#menu  301!
+https://www.calcuttawrapandroll.net/*  https://calcuttawrapandroll.com/:splat  301!
+
 # Ordering lives on RestroBud. Posts, buttons and printed material link here instead,
 # so the RestroBud address never shows and can change without reprinting anything.
 /order          https://restrobud.com/pos/calcutta-wrap-roll  302
