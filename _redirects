@@ -21,29 +21,6 @@ https://www.calcuttawrapandroll.net/blog/*  https://calcuttawrapandroll.com/  30
 https://www.calcuttawrapandroll.net/press  https://calcuttawrapandroll.com/  301!
 https://www.calcuttawrapandroll.net/press/*  https://calcuttawrapandroll.com/  301!
 https://www.calcuttawrapandroll.net/*  https://calcuttawrapandroll.com/:splat  301!
-# Same rules for plain http, so the old homepage redirects to .com in one step (Google's change-of-address check).
-http://calcuttawrapandroll.net/about  https://calcuttawrapandroll.com/#about  301!
-http://calcuttawrapandroll.net/contact  https://calcuttawrapandroll.com/#contact  301!
-http://calcuttawrapandroll.net/general-menu  https://calcuttawrapandroll.com/#menu  301!
-http://calcuttawrapandroll.net/catering-menu  https://calcuttawrapandroll.com/#menu  301!
-http://calcuttawrapandroll.net/gallery  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/gallery/*  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/blog  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/blog/*  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/press  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/press/*  https://calcuttawrapandroll.com/  301!
-http://calcuttawrapandroll.net/*  https://calcuttawrapandroll.com/:splat  301!
-http://www.calcuttawrapandroll.net/about  https://calcuttawrapandroll.com/#about  301!
-http://www.calcuttawrapandroll.net/contact  https://calcuttawrapandroll.com/#contact  301!
-http://www.calcuttawrapandroll.net/general-menu  https://calcuttawrapandroll.com/#menu  301!
-http://www.calcuttawrapandroll.net/catering-menu  https://calcuttawrapandroll.com/#menu  301!
-http://www.calcuttawrapandroll.net/gallery  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/gallery/*  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/blog  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/blog/*  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/press  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/press/*  https://calcuttawrapandroll.com/  301!
-http://www.calcuttawrapandroll.net/*  https://calcuttawrapandroll.com/:splat  301!
 
 # Ordering lives on RestroBud. Posts, buttons and printed material link here instead,
 # so the RestroBud address never shows and can change without reprinting anything.
