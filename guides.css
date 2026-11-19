@@ -1,0 +1,35 @@
+/* Guides section and evergreen pages (built by build.mjs). Builds on legal.css. */
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.nav-right a { text-decoration: none; }
+.order-btn, .ghost-btn { display: inline-block; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-weight: 700; }
+.order-btn { color: #fff; background: linear-gradient(135deg, #d4241a, #9e1a10); }
+.ghost-btn { color: var(--primary-dark); border: 2px solid var(--primary); }
+main.guide { width: min(760px, 92%); margin: 32px auto 56px; }
+.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 10px; }
+.guide h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.1; margin-bottom: 8px; }
+.guide h2 { font-family: "Cormorant Garamond", serif; font-size: 1.7rem; margin: 30px 0 8px; }
+.guide h3 { font-size: 1.1rem; margin: 20px 0 6px; }
+.guide p, .guide li { font-size: 1.05rem; color: #3b2e25; }
+.guide p { margin: 10px 0; }
+.guide ul, .guide ol { margin: 8px 0 8px 22px; }
+.guide li { margin: 4px 0; }
+.meta { color: var(--muted); font-size: .95rem; }
+.lead { font-size: 1.15rem; margin: 10px 0 24px; }
+.hero-img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; margin: 16px 0 6px; box-shadow: 0 12px 30px rgba(60, 30, 10, .15); }
+.tip { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--gold); border-radius: 12px; padding: 12px 16px; margin: 16px 0; }
+table.plan { width: 100%; border-collapse: collapse; margin: 12px 0; background: #fff; border-radius: 12px; overflow: hidden; font-size: .98rem; }
+table.plan th, table.plan td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+table.plan th { background: #f6f3d6; }
+.faq details { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin: 8px 0; }
+.faq summary { font-weight: 700; cursor: pointer; }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; background: #fff8ec; border: 1px solid var(--border); border-radius: 18px; padding: 18px 20px; margin-top: 36px; }
+.cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card { display: grid; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 14px; text-decoration: none; color: var(--text); font-weight: 400; }
+.card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; }
+.card strong { font-size: 1.05rem; }
+.card span { color: var(--muted); font-size: .92rem; }
+.card-date { font-size: .8rem !important; text-transform: uppercase; letter-spacing: .04em; }
+.owner-check { background: #fff3cd; border: 2px dashed #d7a93f; border-radius: 12px; padding: 12px 16px; margin: 12px 0 20px; }
+.owner-check li { font-size: .95rem; }
+@media (max-width: 600px) { .nav-right { gap: 10px; } .nav-right a:first-child { display: none; } }

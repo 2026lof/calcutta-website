@@ -1,6 +1,8 @@
-# Static site (no build step). The only function sends turkey pre-orders to Telegram.
+# build.mjs adds the Guides section (approved articles on or after their date), /delivery,
+# sitemap.xml and robots.txt. It needs no packages. Paro's weekly build hook re-runs it every Tuesday.
 [build]
   publish = "."
+  command = "node build.mjs"
 
 [functions]
   directory = "netlify/functions"

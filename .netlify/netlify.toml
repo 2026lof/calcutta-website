@@ -1,0 +1,341 @@
+functionsDirectory = "C:\\Users\\amene\\OneDrive\\Documents\\_Claude\\LeadGen\\sites\\calcutta-website\\netlify\\functions"
+functionsDirectoryOrigin = "config"
+plugins = []
+headers = []
+
+[build]
+publish = "C:\\Users\\amene\\OneDrive\\Documents\\_Claude\\LeadGen\\sites\\calcutta-website"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "node build.mjs"
+functions = "C:\\Users\\amene\\OneDrive\\Documents\\_Claude\\LeadGen\\sites\\calcutta-website\\netlify\\functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/about"
+to = "https://calcuttawrapandroll.com/#about"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/contact"
+to = "https://calcuttawrapandroll.com/#contact"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/general-menu"
+to = "https://calcuttawrapandroll.com/#menu"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/catering-menu"
+to = "https://calcuttawrapandroll.com/#menu"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/gallery"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/gallery/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/blog"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/blog/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/press"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/press/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://calcuttawrapandroll.net/*"
+to = "https://calcuttawrapandroll.com/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/about"
+to = "https://calcuttawrapandroll.com/#about"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/contact"
+to = "https://calcuttawrapandroll.com/#contact"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/general-menu"
+to = "https://calcuttawrapandroll.com/#menu"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/catering-menu"
+to = "https://calcuttawrapandroll.com/#menu"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/gallery"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/gallery/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/blog"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/blog/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/press"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/press/*"
+to = "https://calcuttawrapandroll.com/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.calcuttawrapandroll.net/*"
+to = "https://calcuttawrapandroll.com/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/order"
+to = "https://restrobud.com/pos/calcutta-wrap-roll"
+status = 302.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/murugan"
+to = "https://ardsleymurugan.com"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/south-indian"
+to = "https://ardsleymurugan.com"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/rewards"
+to = "/#restrobucks"
+status = 302.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
